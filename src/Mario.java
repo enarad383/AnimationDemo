@@ -18,7 +18,11 @@ public class Mario extends MovingImage {
 
 	// METHODS
 	public void walk(int dir) {
+
 		moveByAmount(5*dir, 0);
+
+		// I LIKE TO MOVE IT MOVE IT
+
 	}
 
 	public void jump() {
@@ -26,12 +30,14 @@ public class Mario extends MovingImage {
 	}
 
 	public void act(ArrayList<Shape> obstacles) {
+
 		boolean isGrounded = false;
 		for (Shape s: obstacles){
 			if (super.intersects((Rectangle2D) s)){
 				isGrounded = true;
 			}
 		}
+
 		moveByAmount(0, 5);
 	}
 
