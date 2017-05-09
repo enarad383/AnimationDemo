@@ -16,7 +16,7 @@ public class Mario extends MovingImage {
 
 	// METHODS
 	public void walk(int dir) {
-		// WALK!
+		// I LIKE TO MOVE IT MOVE IT
 	}
 
 	public void jump() {
@@ -24,7 +24,7 @@ public class Mario extends MovingImage {
 	}
 
 	public void act(ArrayList<Shape> obstacles) {
-		// FINISH ME!
+		moveByAmount(0, 5);
 	}
 
 
