@@ -1,6 +1,8 @@
 
 
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
+
 import javax.swing.*;
 import java.awt.image.*;
 import java.util.*;
@@ -16,15 +18,21 @@ public class Mario extends MovingImage {
 
 	// METHODS
 	public void walk(int dir) {
-		// WALK!
+		moveByAmount(5*dir, 0);
 	}
 
 	public void jump() {
-		// JUMP!
+		moveByAmount(0, -15);
 	}
 
 	public void act(ArrayList<Shape> obstacles) {
-		// FINISH ME!
+		boolean isGrounded = false;
+		for (Shape s: obstacles){
+			if (super.intersects((Rectangle2D) s)){
+				isGrounded = true;
+			}
+		}
+		moveByAmount(0, 5);
 	}
 
 
